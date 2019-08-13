@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package>
+    <name>Coinify_Bitcoin_Payments</name>
+    <version>1.1.2</version>
+    <stability>stable</stability>
+    <license>commercial</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Accept Bitcoin with Coinify</summary>
+    <description>Copyright (C) 2014 by Coinify&#xD;
+&#xD;
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR&#xD;
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,&#xD;
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE&#xD;
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER&#xD;
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,&#xD;
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN&#xD;
+THE SOFTWARE.</description>
+    <notes>Release Notes:&#xD;
+1. Restructuring of previous version code and implemented compatibility with Coinifiy API v3&#xD;
+2. Simplified Block responsible for checkout note.&#xD;
+3. Adjusted Payment Method Class, newly created orders will have status "Pending Payment"&#xD;
+5. Magento Invoices will be created only after IPN callback, if successfully payment has been done&#xD;
+6. Added two order statuses: Coinify Overpaid and Coinify Partially Paid&#xD;
+7. Added additional fields in System Configuration: Checkout Message, API Secret, IPN Secret, Debug (yes/no)</notes>
+    <authors><author><name>Coinify</name><user>Coinify</user><email>jnn@coinify.com</email></author></authors>
+    <date>2015-05-18</date>
+    <time>09:51:43</time>
+    <contents><target name="magecommunity"><dir name="Coinify"><dir name="Coinify"><dir name="Block"><file name="Info.php" hash="5d6cdf82c435bc3ca829a493be1417d1"/></dir><dir name="Helper"><file name="Data.php" hash="b3340d04265dc18fa21b5d48d6866572"/><file name="Ipn.php" hash="8bd997f6df7d3a1155adb69f63da03da"/></dir><dir name="Model"><file name="PaymentMethod.php" hash="5e3d22cdf369be097b9c9fc6b2d5fedc"/></dir><dir name="controllers"><file name="CallbackController.php" hash="b1df66104a69dd1094cb5982f3be54f5"/></dir><dir name="etc"><file name="config.xml" hash="87b6fdce29ab6c77b064154a12b181db"/><file name="system.xml" hash="75e14f8ccc6c272cdc81cceda408ea35"/></dir><dir name="sql"><dir name="coinify_setup"><file name="mysql4-install-1.1.0.php" hash="e6a6d85caa9a85337fd8116541a5941f"/></dir></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="coinify.xml" hash="95e8543403c9ae89ad78407e19109802"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Coinify_Coinify.xml" hash="887ffae46d4dd9ad0877e8b07b950a06"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.4.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

@@ -1,0 +1,11 @@
+<config>
+	<modules>
+		<Coinify_Coinify>
+			<active>true</active>
+			<codePool>community</codePool>
+			<depends>
+				<Mage_Payment />
+			</depends>
+		</Coinify_Coinify>
+	</modules>
+</config>

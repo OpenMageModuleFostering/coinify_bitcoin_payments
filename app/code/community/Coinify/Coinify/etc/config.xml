@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * Copyright 2015 Kris
+ *
+ *  This file is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+
+ *  This file is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+
+ *  You should have received a copy of the GNU General Public License.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Author: Kris
+ */
+-->
+<config>
+	<modules>
+		<Coinify_Coinify>
+			<version>1.1.2</version>
+		</Coinify_Coinify>
+	</modules>
+	<global>
+		<blocks>
+			<coinify>
+				<class>Coinify_Coinify_Block</class>
+			</coinify>
+		</blocks>
+		<helpers>
+			<coinify>
+				<class>Coinify_Coinify_Helper</class>
+			</coinify>
+		</helpers>
+		<models>
+			<coinify>
+				<class>Coinify_Coinify_Model</class>
+			</coinify>
+		</models>
+		<resources>
+			<coinify_setup>
+				<setup>
+					<module>Coinify_Coinify</module>
+				</setup>
+			</coinify_setup>
+		</resources>
+	</global>
+	<frontend>
+		<routers>
+			<coinify>
+				<use>standard</use>
+				<args>
+					<module>Coinify_Coinify</module>
+					<frontName>coinify</frontName>
+				</args>
+			</coinify>
+		</routers>
+		<layout>
+			<updates>
+				<coinify>
+					<file>coinify.xml</file>
+				</coinify>
+			</updates>
+		</layout>
+	</frontend>
+	<default>
+		<payment>
+			<coinify>
+				<active>1</active>
+				<model>coinify/paymentMethod</model>
+				<title>coinify</title>
+				<payment_action>createCoinifyInvoiceAndRedirect</payment_action>
+				<order_status>pending_payment</order_status>
+				<title>Bitcoin by Coinify</title>
+				<message>Please click Place Order to continue to Coinify.</message>
+			</coinify>
+		 </payment>
+	</default>
+</config>
