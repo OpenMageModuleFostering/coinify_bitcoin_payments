@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Coinify_Bitcoin_Payments",
+    "name": "OpenMageModuleFostering\/Coinify_Bitcoin_Payments",
     "type": "magento-module",
     "license": "commercial",
     "homepage": "",
     "description": "Accept Bitcoin with Coinify",
     "authors": [
-    {
-        "name": "Coinify",
-        "email": "jnn@coinify.com"
-    }
-],
+        {
+            "name": "Coinify",
+            "email": "jnn@coinify.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
